@@ -1,71 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5 Productos Top de AliExpress para España</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas AliExpress | Tecnología, Gadgets y más</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; }
-    header { background: #ff6f61; color: white; text-align: center; padding: 2rem 1rem; }
-    header h1 { margin: 0; font-size: 1.8rem; }
-    .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 1rem; }
-    .card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin: 0.5rem; width: calc(50% - 1rem); max-width: 300px; display: flex; flex-direction: column; }
-    .card img { width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px; }
-    .info { padding: 1rem; flex-grow: 1; }
-    .info h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
-    .info p { margin: 0 0 1rem; color: #333; }
-    .info a { display: inline-block; text-decoration: none; background: #ff6f61; color: white; padding: 0.6rem 1rem; border-radius: 4px; font-weight: bold; }
-    @media (max-width: 600px) {
-      .card { width: 100%; }
-    }
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+    header { background-color: #ff4747; color: white; padding: 20px; text-align: center; }
+    nav { display: flex; justify-content: center; background: #fff; padding: 10px; gap: 15px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #ff4747; font-weight: bold; }
+    .category { padding: 20px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .product { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; }
+    .product img { width: 100%; border-radius: 4px; }
+    .product h4 { margin: 10px 0 5px; color: #333; }
+    .product p { font-size: 14px; color: #666; }
+    .product a { display: inline-block; margin-top: 10px; color: white; background: #ff4747; padding: 8px 12px; border-radius: 4px; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>5 Productos Top de AliExpress para España 🇪🇸</h1>
-    <p>Los mejores chollos que no te puedes perder</p>
+    <h1>🔥 Ofertas Imperdibles en AliExpress</h1>
+    <p>Los mejores productos a precios especiales - solo por tiempo limitado</p>
   </header>
-  <div class="container">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Auriculares+Bluetooth" alt="Auriculares Bluetooth" />
-      <div class="info">
-        <h2>Auriculares Bluetooth</h2>
-        <p>Precio: $8.99</p>
-        <a href="YOUR_AFFILIATE_LINK_1" target="_blank">Comprar</a>
+
+  <nav>
+    <a href="#tech">Tecnología</a>
+    <a href="#audio">Audio</a>
+    <a href="#home">Casa y Jardín</a>
+    <a href="#gadgets">Gadgets</a>
+  </nav>
+
+  <section class="category" id="tech">
+    <h2>🖥️ Tecnología</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/S2afec89f9eb04a328066dfd285d928d1Y.jpg" alt="Xiaomi Watch 4">
+        <h4>Smartwatch Xiaomi Redmi Watch 4</h4>
+        <p>Pantalla AMOLED 1.97", seguimiento deportivo y batería larga.</p>
+        <a href="YOUR_AFFILIATE_LINK_1">Ver en AliExpress</a>
+      </div>
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/Sbf4cb842b3a54618ae2a0834e2ef31dbM.jpg" alt="Samsung Tab A9">
+        <h4>Samsung Galaxy Tab A9</h4>
+        <p>Tableta 11" con conectividad 5G. Potencia y estilo.</p>
+        <a href="YOUR_AFFILIATE_LINK_2">Ver en AliExpress</a>
+      </div>
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/Sf8d5e6c689b24df3820f202fe21b0e12M.jpg" alt="Proyector 4K">
+        <h4>Proyector Transpeed 4K Wifi6</h4>
+        <p>Disfruta tus películas con calidad 4K y WiFi ultrarrápido.</p>
+        <a href="YOUR_AFFILIATE_LINK_3">Ver en AliExpress</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Lámpara+Nocturna" alt="Lámpara Nocturna" />
-      <div class="info">
-        <h2>Lámpara Nocturna Inteligente</h2>
-        <p>Precio: $6.99</p>
-        <a href="YOUR_AFFILIATE_LINK_2" target="_blank">Comprar</a>
+  </section>
+
+  <section class="category" id="audio">
+    <h2>🎧 Audio</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/S9398f8bde2984c9dbe9ff4964eeb1299m.jpg" alt="Xiaomi Air 7">
+        <h4>Auriculares Xiaomi Air 7</h4>
+        <p>Hasta 30 horas sin recargar. Diseño moderno y sonido premium.</p>
+        <a href="YOUR_AFFILIATE_LINK_4">Ver en AliExpress</a>
+      </div>
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/Sf1e28c4e20154871ad3e6e6a3ccf1a0dn.jpg" alt="QCY C30">
+        <h4>QCY Crossky C30</h4>
+        <p>Bluetooth 5.4, diseño de oreja abierta y muy ligero.</p>
+        <a href="YOUR_AFFILIATE_LINK_5">Ver en AliExpress</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Cargador+Rápido" alt="Cargador Rápido" />
-      <div class="info">
-        <h2>Cargador Rápido USB-C</h2>
-        <p>Precio: $5.49</p>
-        <a href="YOUR_AFFILIATE_LINK_3" target="_blank">Comprar</a>
+  </section>
+
+  <section class="category" id="home">
+    <h2>🏠 Casa y Jardín</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/Sf7a65b7cf07d4f2e85b4e2b84cc7c6f4M.jpg" alt="Lámpara LED">
+        <h4>Lámpara LED de escritorio</h4>
+        <p>Moderna, táctil y regulable. Ideal para cualquier espacio.</p>
+        <a href="YOUR_AFFILIATE_LINK_6">Ver en AliExpress</a>
+      </div>
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/S52cfe6a21dbf47a28b7f10ceec719306n.jpg" alt="Ventilador de techo">
+        <h4>Ventilador de Techo Inteligente</h4>
+        <p>Con control remoto y luz LED integrada. Bajo consumo.</p>
+        <a href="YOUR_AFFILIATE_LINK_7">Ver en AliExpress</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Soporte+de+Coche" alt="Soporte de Coche" />
-      <div class="info">
-        <h2>Soporte para Móvil de Coche</h2>
-        <p>Precio: $4.99</p>
-        <a href="YOUR_AFFILIATE_LINK_4" target="_blank">Comprar</a>
+  </section>
+
+  <section class="category" id="gadgets">
+    <h2>🧳 Gadgets</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/S89b83b934c194b05b8cc86df73ab3ae4o.jpg" alt="Murpiso 3 en 1">
+        <h4>Cargador Inalámbrico 3 en 1</h4>
+        <p>Murpiso para móvil, reloj y auriculares. Compacto y eficiente.</p>
+        <a href="YOUR_AFFILIATE_LINK_8">Ver en AliExpress</a>
+      </div>
+      <div class="product">
+        <img src="https://ae01.alicdn.com/kf/S8dd44f4c61ec4093aee8ae97d2cb31e8u.jpg" alt="Baseus Cable">
+        <h4>Cable Magnético Baseus</h4>
+        <p>Carga rápida, diseño duradero y compatible con todo.</p>
+        <a href="YOUR_AFFILIATE_LINK_9">Ver en AliExpress</a>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Reloj+Digital" alt="Reloj Digital" />
-      <div class="info">
-        <h2>Reloj Digital Básico</h2>
-        <p>Precio: $9.99</p>
-        <a href="YOUR_AFFILIATE_LINK_5" target="_blank">Comprar</a>
-      </div>
-    </div>
-  </div>
+  </section>
 </body>
 </html>
