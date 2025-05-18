@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categoría</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { padding: 20px; background: #f8f9fa; }
+    header { text-align: center; margin-bottom: 30px; }
+    .logo { max-width: 150px; margin-bottom: 15px; }
+    .product-card { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/AliExpress_logo.svg/2560px-AliExpress_logo.svg.png" alt="AliExpress Logo" class="logo" />
+    <h1 id="categoryTitle">Categoría</h1>
+    <button class="btn btn-secondary" onclick="window.location.href='index.html'">⬅ Volver a categorías</button>
+  </header>
+
+  <div class="container" id="productContainer">
+    <div class="row" id="productsRow"></div>
+  </div>
+
+  <script>
+    // כאן מכניסים את כל המוצרים לפי קטגוריות
+    const productsData = {
+      belleza: [
+        {
+          name: "Set de maquillaje profesional",
+          description: "Paleta de sombras y brochas para un maquillaje completo.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hd148c16c8d444040bbdf5f6f8d6f2046a.jpg",
+            "https://ae04.alicdn.com/kf/H8f59810e2a884d39ab3f71b97840871aB.jpg"
+          ],
+          price: "19.99€",
+          link: "https://es.aliexpress.com/item/1005002630544719.html"
+        },
+        {
+          name: "Depiladora eléctrica facial",
+          description: "Depilación suave y sin dolor para rostro y cuerpo.",
+          images: [
+            "https://ae04.alicdn.com/kf/H151f9a88a1964ecb8b1ed99b92e10e0fY.jpg",
+            "https://ae04.alicdn.com/kf/Hfe8858b94c32497aa47f0b5d096f6f59S.jpg"
+          ],
+          price: "14.50€",
+          link: "https://es.aliexpress.com/item/4000365430183.html"
+        },
+        {
+          name: "Máscara facial de colágeno",
+          description: "Tratamiento rejuvenecedor con colágeno y vitaminas.",
+          images: [
+            "https://ae04.alicdn.com/kf/H1ff58e007a0f4a6591584d4e988a6f05r.jpg",
+            "https://ae04.alicdn.com/kf/H01c6cfe330df44e0a872e3990bbbc55c1.jpg"
+          ],
+          price: "8.99€",
+          link: "https://es.aliexpress.com/item/1005002974654875.html"
+        },
+        {
+          name: "Set de cuidado de uñas",
+          description: "Kit completo para manicura y pedicura en casa.",
+          images: [
+            "https://ae04.alicdn.com/kf/H160a2f3df9e54ee49a1c264879bdb4ecw.jpg",
+            "https://ae04.alicdn.com/kf/H98a9cae9ec9f4940a195e40dc040ff0bI.jpg"
+          ],
+          price: "12.30€",
+          link: "https://es.aliexpress.com/item/4000533230212.html"
+        },
+        {
+          name: "Cepillo facial sónico",
+          description: "Limpieza profunda y masaje para la piel del rostro.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hf3db77ee48ac4f689c6dd79c6984a1d5j.jpg",
+            "https://ae04.alicdn.com/kf/H1e79c2d4168d49e99b6a2b1c6d1e8c07N.jpg"
+          ],
+          price: "22.99€",
+          link: "https://es.aliexpress.com/item/1005003345918557.html"
+        }
+      ],
+
+      moda: [
+        {
+          name: "Vestido de verano",
+          description: "Ligero, fresco y cómodo, ideal para días soleados.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hd59e2f2b07c74550a246e80afc24a43ad.jpg",
+            "https://ae04.alicdn.com/kf/H7b7b5f9b22a6463ab137179b0cddc1b2n.jpg"
+          ],
+          price: "15.99€",
+          link: "https://es.aliexpress.com/item/1005003476286732.html"
+        },
+        {
+          name: "Reloj de pulsera unisex",
+          description: "Diseño moderno y elegante, resistente al agua.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hae77f2c5fbbd4f43909f0c6e1d8be54bo.jpg",
+            "https://ae04.alicdn.com/kf/H0e17355b4529458e9b5414e178d08939k.jpg"
+          ],
+          price: "18.75€",
+          link: "https://es.aliexpress.com/item/1005003256624281.html"
+        },
+        {
+          name: "Bolso de mano para mujer",
+          description: "Amplio y con múltiples compartimentos.",
+          images: [
+            "https://ae04.alicdn.com/kf/H8b8a7c87b6b44550a16d8b5e1b4f7f48a.jpg",
+            "https://ae04.alicdn.com/kf/H91e8a4e62d244916a134e4f962ce0d9ea.jpg"
+          ],
+          price: "14.90€",
+          link: "https://es.aliexpress.com/item/1005003542284473.html"
+        },
+        {
+          name: "Gafas de sol clásicas",
+          description: "Protección UV y diseño atemporal.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hb24527f164b245f78a1d249bc6d44a8bF.jpg",
+            "https://ae04.alicdn.com/kf/H42d217e5d3f8423d93107f3bbd3e4f51h.jpg"
+          ],
+          price: "9.99€",
+          link: "https://es.aliexpress.com/item/1005003391724868.html"
+        },
+        {
+          name: "Zapatillas deportivas ligeras",
+          description: "Cómodas y transpirables para uso diario.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hfb997f4ff6f747a1afed3b2584dc1d48W.jpg",
+            "https://ae04.alicdn.com/kf/Hec7c9e1388f3426ba7585af6ad7a49b2L.jpg"
+          ],
+          price: "27.99€",
+          link: "https://es.aliexpress.com/item/1005003228918473.html"
+        }
+      ],
+
+      tecnologia: [
+        {
+          name: "Auriculares inalámbricos Bluetooth",
+          description: "Con cancelación de ruido y gran autonomía.",
+          images: [
+            "https://ae04.alicdn.com/kf/H1d3b27ef3e8e4a6bb086eb1f7d1c0db2p.jpg",
+            "https://ae04.alicdn.com/kf/H27f49e6a39914ca3959ef36ad07a9c63y.jpg"
+          ],
+          price: "25.50€",
+          link: "https://es.aliexpress.com/item/1005003214530921.html"
+        },
+        {
+          name: "Smartwatch deportivo",
+          description: "Monitor de ritmo cardíaco y GPS integrado.",
+          images: [
+            "https://ae04.alicdn.com/kf/H1210d34e7b244e4bb1f5d2e9e9439ef2Z.jpg",
+            "https://ae04.alicdn.com/kf/H9a8b978ecb9e4b6b9cdd8c8ed8d8798aQ.jpg"
+          ],
+          price: "45.99€",
+          link: "https://es.aliexpress.com/item/1005003456789123.html"
+        },
+        {
+          name: "Power bank 20000mAh",
+          description: "Carga rápida para móviles y tablets.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hb78e67cfc8b4418b9a0e7e9874c3c10bO.jpg",
+            "https://ae04.alicdn.com/kf/H81f1e4d3ea354bdf992f54a46f74c96a0.jpg"
+          ],
+          price: "18.30€",
+          link: "https://es.aliexpress.com/item/1005003201478907.html"
+        },
+        {
+          name: "Cargador inalámbrico rápido",
+          description: "Compatible con smartphones y accesorios Qi.",
+          images: [
+            "https://ae04.alicdn.com/kf/Hcd9a7ed073ca42a9bba432f57413a0b6q.jpg",
+            "https://ae04.alicdn.com/kf/H99c8d5bc1a5a4b5a9e541f9c2bb45d8rC.jpg"
+          ],
+          price: "13.99€",
+          link: "https://es.aliexpress.com/item/1005003354891224.html"
+        },
+        {
+          name: "Lámpara LED inteligente",
+          description: "Control por app y múltiples modos de iluminación.",
+          images: [
+            "https://ae04.alicdn.com/kf/Heb4db328d51f4120a30c8f427ea2375fV.jpg",
+            "https://ae04.alicdn.com/kf/Hdbb71f7eb32d4aabb76845a978e6a8b7M.jpg"
+          ],
+          price: "22.50€",
+          link: "https://es.aliexpress.com/item/1005003456789124.html"
+        }
+      ]
+    };
+
+    function getCategoryFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('cat') || 'belleza';
+    }
+
+    function createProductCard(product, idx) {
+      const id = `carousel${idx}`;
+      return `
+      <div
+
+
+
+
+
+ChatGPT said:
+class="col-md-4 product-card">
+<div class="card shadow-sm">
+<div id="${id}" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+${product.images.map((img, i) =>
+<div class="carousel-item ${i === 0 ? 'active' : ''}"> <img src="${img}" class="d-block w-100" alt="${product.name}"> </div>).join('')}
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#${id}" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#${id}" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Siguiente</span>
+</button>
+</div>
+<div class="card-body">
+<h5 class="card-title">${product.name}</h5>
+<p class="card-text">${product.description}</p>
+<p class="card-text fw-bold">${product.price}</p>
+<a href="${product.link}" target="_blank" class="btn btn-primary w-100">Comprar</a>
+</div>
+</div>
+</div>
+`;
+}
+
+javascript
+Copy
+Edit
+function renderProducts(category) {
+  const container = document.getElementById('productsRow');
+  container.innerHTML = ''; 
+  const products = productsData[category];
+  if (!products) {
+    container.innerHTML = '<p>No hay productos en esta categoría.</p>';
+    return;
+  }
+  products.forEach((product, i) => {
+    container.insertAdjacentHTML('beforeend', createProductCard(product, i));
+  });
+}
+
+function init() {
+  const category = getCategoryFromUrl();
+  const titleMap = {
+    belleza: "Belleza",
+    moda: "Moda",
+    tecnologia: "Tecnología"
+  };
+  document.getElementById('categoryTitle').textContent = titleMap[category] || "Categoría";
+  renderProducts(category);
+}
+
+window.onload = init;
+</script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> </body> </html> ```
